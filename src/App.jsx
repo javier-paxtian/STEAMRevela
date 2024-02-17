@@ -9,14 +9,16 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/game" element={<Game />} />
-          <Route path="/catalogue" element={<Catalogue />} />
-        </Routes>
-      </Router>
+      <div className='max-w-[1920px] m-auto'>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/game" element={<Game />} />
+            <Route path="/catalogue" element={<Catalogue />} />
+          </Routes>
+        </Router>
+      </div>
     </>
   )
 }
