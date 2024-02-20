@@ -10,8 +10,8 @@ const Card = (props) => {
                 imagenes && imagenes.length > 0 && imagenes.map((item, index) => {
                     return (
                         <>
-                            <div key={index}>
-                                <img className='w-[100px] h-[100px] lg:w-[150px] lg:h-[150px] object-contain' src={`./src/assets/catalogo/${item.id}.png`} alt="" />
+                            <div key={index} className='drop-shadow-lg w-[100px] h-[100px] lg:w-[150px] lg:h-[150px] bg-primary rounded-md'>
+                                <img className='object-cover w-full h-full rounded-md transition-opacity duration-300  hover:opacity-70' src={`./src/assets/catalogo/${item.id}.jpg`} alt="" />
                             </div>
                         </>
                     )

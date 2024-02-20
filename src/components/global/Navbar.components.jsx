@@ -1,13 +1,18 @@
 import { useNavigate } from 'react-router-dom'
 import '../../assets/css/global.css'
 import { pages } from '../../assets/global'
+import logo from '../../assets/img/logo.svg'
 
 const Navbar = () => {
     const navigate = useNavigate()
     // navigate('/viaje/selecionar-plan', { state: { data: data } });
     return <>
-        <nav className='bg-primary text-white font-montserrat font-medium text-lg'>
-            <div className='flex justify-center gap-x-9 px-[5%] py-[30px]'>
+        <nav className='flex flex-col gap-y-[20px] bg-white drop-shadow-lg justify-center items-center py-[30px]'>
+            <div className='flex gap-x-[10px] items-center'>
+                <img className='h-[60px]' src={logo} alt="" />
+                <h2 className='font-bold text-xl text-primary'>STEAM<span className='text-secondary'>Revela</span></h2>
+            </div>
+            <div className='flex justify-center gap-x-12 text-primary text-base'>
                 {
                     pages && pages.map((item, index) => {
                         return (
@@ -15,9 +20,6 @@ const Navbar = () => {
                         )
                     })
                 }
-                {/* <div><a className='cursor-pointer' onClick={() => navigate('/', {})}>Inicio</a></div>
-                <div><a className='cursor-pointer' onClick={() => navigate('/catalogue', {})}>Catálago</a></div>
-                <div><a className='cursor-pointer' onClick={() => navigate('/game', {})}>Juego</a></div> */}
             </div>
         </nav>
     </>
